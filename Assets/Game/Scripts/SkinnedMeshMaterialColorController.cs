@@ -2,9 +2,9 @@ using System.Collections;
 using Helpers;
 using UnityEngine;
 
-public class MaterialColorController : MonoBehaviour
+public class SkinnedMeshMaterialColorController : MonoBehaviour
 {
-    [SerializeField]Material material;
+    [SerializeField]SkinnedMeshRenderer skinnedMeshRenderer;
 
     public void SetMaterialColorToRandomColor()
     {
@@ -13,6 +13,6 @@ public class MaterialColorController : MonoBehaviour
 
     void SetMaterialColor(Color color)
     {
-        material.SetColor("_Color", color);
+        skinnedMeshRenderer.material.SetColor("_Color", color);
     }
 }
